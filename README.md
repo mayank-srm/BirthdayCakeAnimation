@@ -1,2 +1,2 @@
 # BirthdayCakeAnimation
-made for fun uses almost every inbuilt animation of Android.
+just made for fun have almost every inbuilt animation feature of Android.

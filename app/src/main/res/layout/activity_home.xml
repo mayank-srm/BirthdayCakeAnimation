@@ -9,8 +9,9 @@
         android:id="@+id/img_back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:text="Wish You A Very Happy"
+        android:layout_marginTop="300dp"
+        android:layout_centerHorizontal="true"
         android:textSize="40sp"
         tools:ignore="ContentDescription" />
 
@@ -21,7 +22,7 @@
         android:layout_centerInParent="true"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/img_back"
-        android:text="Birthday"
+        android:text="  Birthday\n\nGandarva"
         android:textSize="60sp"
         tools:ignore="ContentDescription" />
     <ImageView
@@ -30,5 +31,6 @@
         android:layout_centerInParent="true"
         android:src="@drawable/curtain"
         android:id="@+id/img_front"
+        android:background="#3C0707"
         tools:ignore="ContentDescription" />
 </RelativeLayout>

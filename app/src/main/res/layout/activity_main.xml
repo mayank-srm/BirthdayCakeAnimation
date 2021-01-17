@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#AE9898"
+    android:background="#C1A3A3"
     tools:context=".MainActivity">
 
     <nl.dionsegijn.konfetti.KonfettiView
         android:id="@+id/viewKonfetti"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
-
 
     <ImageView
         android:id="@+id/cake"
@@ -22,6 +20,7 @@
         android:src="@drawable/cake"
         tools:ignore="ContentDescription"
        />
+
     <ImageView
         android:layout_width="125dp"
         android:layout_height="125dp"
@@ -108,4 +107,13 @@
         android:onClick="explode"
         tools:ignore="ContentDescription" />
 
+    <Button
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20dp"
+        android:onClick="info"
+        android:background="@drawable/ic_baseline_info_24"
+        android:backgroundTint="@color/active_dark"/>
 </RelativeLayout>

@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Birthday Cake Animation</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="rate_us">Rate us</string>
+    <string name="our_apps">Our apps</string>
+    <string name="about_us">About Developer</string>
+    <string name="developer_name">MAYANK SINGH</string>
+    <string name="about_description">Wish You A Very Happy Birthday</string>
+    <string name="support_description">Get developed by the best</string>
+    <string name="support_name">ThePreneur</string>
+    <string name="share">Share</string>
 </resources>

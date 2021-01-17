@@ -2,6 +2,7 @@ package com.mayank.birthdaycakeanimation;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView candle1, candle2,flame1,flame2,balloon1;
     Button button;
+    MediaPlayer mediaPlayer;
     int counter = 0;
     int[] imageArray = { R.drawable.candle_0, R.drawable.candle_1, R.drawable.candle_2, R.drawable.candle_3, R.drawable.candle_4
                         ,R.drawable.candle_5, R.drawable.candle_6, R.drawable.candle_7, R.drawable.candle_8, R.drawable.candle_9,
@@ -49,12 +51,13 @@ public class MainActivity extends AppCompatActivity {
         balloon1 = findViewById(R.id.balloon1);
         Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.animation);
         balloon1.setAnimation(animation);
-        final MediaPlayer mediaPlayer  = MediaPlayer.create(getApplicationContext(),R.raw.song);
+        mediaPlayer  = MediaPlayer.create(getApplicationContext(),R.raw.song);
 
         animation.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
                 mediaPlayer.start();
+                mediaPlayer.setLooping(true);
             }
 
             @Override
@@ -119,5 +122,18 @@ public class MainActivity extends AppCompatActivity {
     public void explode(View view) {
         ExplosionField explosionField = ExplosionField.attach2Window(this);
         explosionField.explode(view);
+    }
+
+    @Override
+    public void onBackPressed() {
+        mediaPlayer.stop();
+        Intent intent = new Intent(this,WishActivity.class);
+        startActivity(intent);
+    }
+
+    public void info(View view) {
+        mediaPlayer.stop();
+        Intent intent = new Intent(this,AboutActivity.class);
+        startActivity(intent);
     }
 }
